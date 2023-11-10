@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint-fix": "npm run lint -- --fix",
     "preview": "vite preview",
-    "styleLint": "npx stylelint \"src/*.css\""
+    "styleLint": "npx stylelint \"src/*.css\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,6 +27,7 @@
     "prettier": "3.0.3",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "husky": "^8.0.0"
   }
 }
