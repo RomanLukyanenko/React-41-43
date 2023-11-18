@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.education {
+    color: #fe7ec9;
+    text-transform: uppercase;
+}
