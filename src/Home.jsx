@@ -1,13 +1,8 @@
-import { Header } from "./sections/mainHeader";
-import { Hero } from "./sections/Hero";
-import { Advantages } from "./sections/advantage";
+import Button, { Click } from "./components/Button"
 
-export const Home = () => {
-    return (
-        <>
-            <Header />
-            <Hero />
-            <Advantages />
-        </>
-    );
-};
+export const Home = () => (
+    <div>
+        <Button variant="primary" color="white" size="large" onClick={Click}> Основна кнопка </Button>
+        <Button variant="gray" color="black" size="medium" disabled> Неактивна кнопка </Button>
+    </div>
+);
