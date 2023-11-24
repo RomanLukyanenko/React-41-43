@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {ToDoList} from "./sections/toDoList/index"
 
 import './App.css'
