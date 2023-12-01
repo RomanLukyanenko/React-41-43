@@ -15,7 +15,7 @@ export const Button = ({onClick}) => {
         setCount(count+1);
         if (onClick) {
             onClick();
-        };
+        }
     };
 
     return <button onClick={trry}
