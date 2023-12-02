@@ -18,6 +18,6 @@ export const Button = ({onClick}) => {
         }
     };
 
-    return <button onClick={trry}
+    return <button onClick={trry }
     >Click me {count}</button>
 };
