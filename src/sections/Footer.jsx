@@ -39,11 +39,11 @@ export const Footer = () => {
             <div className="footer__social"> </div>
 
             <p className="footer__copyright">
-                <span>Всі права на статті, ілюстрації, інші матеріали належать site.com та охороняються законом України
-                    «Про авторське право і суміжні права».<br/>При використанні матеріалів посилання на сайт
-                    обов'язкове!</span>
-                <span className="footer__developer">Розробник сайту: <a href="#" target="_blank">Роман</a></span>
-            </p>
+                    <span>Всі права на статті, ілюстрації, інші матеріали належать site.com та охороняються законом України
+                        &laquo;Про авторське право і суміжні права&raquo;.<br/>При використанні матеріалів посилання на сайт
+                        обов&apos;язкове!</span>
+                    <span className="footer__developer">Розробник сайту: <a href="#" target="_blank">Роман</a></span>
+                </p>
         </div>
     </div>
      );
