@@ -5,10 +5,11 @@ import { Gallary } from "./sections/Gallary"
 import { Footer } from "./sections/Footer"
 import { Cart } from "./sections/Cart"
 import { Icons } from "./util/Icons"
+import { Formik } from "formik"
 import "./App.css"
 
 export const App = () => {
-    return(
+return (
     <>
         <NavigationBar />
         <Cataloge />
