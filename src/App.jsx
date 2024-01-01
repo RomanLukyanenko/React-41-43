@@ -12,6 +12,7 @@ return (
         console.log(values);
         console.log(formikBag);
     }}
+    
     >
         {(...rest) => {
         const { handleSubmit, handleChange, handleBlur, values } = rest;
