@@ -8,6 +8,8 @@ export const App = () => {
     city: Yup.string().required("City is required"),
   });
 
+  
+
   return (
     <>
       <p>Formik</p>
