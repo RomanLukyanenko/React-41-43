@@ -81,3 +81,16 @@ export const App = () => {
     </>
   );
 };
+    );
+}
+ return (
+        <>
+            <table onClick={handleTableClick}>
+                <tbody>
+                    {renderTable()}
+                </tbody>
+            </table>
+            {clickedCell && <p>Номер клікнутої комірки: {clickedCell}</p>}
+        </>
+    );
+};
