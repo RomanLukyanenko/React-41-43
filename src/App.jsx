@@ -44,5 +44,5 @@ export const App = () => {
         <button type="submit" style={{ maxWidth: "100%", width: "15%" }}>Submit</button>
       </form>
     </>
-  );
-};
+    );
+}
