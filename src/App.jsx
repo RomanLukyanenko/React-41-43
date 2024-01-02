@@ -8,8 +8,6 @@ export const App = () => {
     city: Yup.string().required("City is required"),
   });
 
-  
-
   return (
     <>
       <p>Formik</p>
@@ -17,6 +15,7 @@ export const App = () => {
         initialValues={{ firstName: "", lastName: "", city: "" }}
         validationSchema={validationSchema}
         onSubmit={(values, formikBag) => {
+          formikBag.resetForm();
           console.log(values);
           console.log(formikBag);
         }}
