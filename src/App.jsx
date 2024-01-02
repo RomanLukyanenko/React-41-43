@@ -1,56 +1,86 @@
 import { Formik } from "formik";
-
+import * as Yup from "yup";
 
 export const App = () => {
-return (
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required("First Name is required"),
+    lastName: Yup.string().required("Last Name is required"),
+    city: Yup.string().required("City is required"),
+  });
+
+  return (
     <>
-    <p> Formic </p>
-    <Formik
-    initialValues={{ firstName: "", lastName: "", city: "" }}
-    enableReinitialize
-    onSubmit={(values, formikBag ) => {
-        console.log(values);
-        console.log(formikBag);
-    }}
-    >
-        {(...rest) => {
-        const { handleSubmit, handleChange, handleBlur, values } = rest;
-        console.log(rest);
-        return(
-            <form onSubmit={handleSubmit}>
-                <label>
-                 First Name:
-                <input 
-                name= "firstName" 
-                onChange={handleChange} 
-                onBlur={handleBlur} 
-                value={values.firstName}
-                />
-                </label>
-                <label>
-                Last Name: 
-                <input 
-                name= "lastName" 
-                onChange={handleChange} 
-                onBlur={handleBlur} 
-                value={values.lastName}
-                />
-                </label>
-                <label>
-                City:
-                 <input 
-                name= "city" 
-                onChange={handleChange} 
-                onBlur={handleBlur} 
-                value={values.city}
-                />
-                </label>
-                <button type="submit"> Submit </button>
-            </form>
-            )
+      <p>Formik</p>
+      <Formik
+        initialValues={{ firstName: "", lastName: "", city: "" }}
+        validationSchema={validationSchema}
+        onSubmit={(values, formikBag) => {
+          formikBag.resetForm();
+          console.log(values);
+          console.log(formikBag);
         }}
-    </Formik>
+      >
+        {(formikProps) => {
+          const {
+            handleSubmit,
+            handleChange,
+            handleBlur,
+            values,
+            errors,
+            touched,
+          } = formikProps;
+
+          return (
+            <form
+              onSubmit={handleSubmit}
+              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+            >
+              <label>
+                First Name:
+                <input
+                  name="firstName"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.firstName}
+                />
+                {touched.firstName && errors.firstName && (
+                  <div style={{ color: "red" }}>{errors.firstName}</div>
+                )}
+              </label>
+              <label>
+                Last Name:
+                <input
+                  name="lastName"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.lastName}
+                />
+                {touched.lastName && errors.lastName && (
+                  <div style={{ color: "red" }}>{errors.lastName}</div>
+                )}
+              </label>
+              <label>
+                City:
+                <input
+                  name="city"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.city}
+                />
+                {touched.city && errors.city && (
+                  <div style={{ color: "red" }}>{errors.city}</div>
+                )}
+              </label>
+              <button type="submit" style={{ maxWidth: "100%", width: "15%" }}>
+                Submit
+              </button>
+            </form>
+          );
+        }}
+      </Formik>
     </>
+  );
+};
     );
 }
  return (
