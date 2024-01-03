@@ -6,7 +6,6 @@ export const App = () => {
     const inputRef = useRef(null);
     const [color, setColor] = useState()
 
-    
     return (
         <>
             <button onClick={() => {
