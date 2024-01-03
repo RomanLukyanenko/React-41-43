@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { Button } from "./components/Button";
 
-
 export const App = () => {
     const inputRef = useRef(null);
     const [color, setColor] = useState()
