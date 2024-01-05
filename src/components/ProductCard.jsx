@@ -1,5 +1,5 @@
 // Компонент ProductCard для відображення інформації про продукт
-export const ProductCard = ({ title, price, oldprice, img, formatPrice, onAddToCart }) => {
+export const ProductCard = ({ title, price, oldprice, img, formatPrice }) => {
   return (
     <div className="card-product">
       {/* Блок з зображенням продукту */}
