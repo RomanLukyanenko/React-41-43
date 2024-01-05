@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavigationBar } from './sections/NavigationBar';
 import { Cataloge } from './sections/Cataloge';
-import { HotOffer } from './sections/HotOffer';
-import { Gallary } from './sections/Gallary';
-import { Footer } from './sections/Footer';
-import { Cart } from './sections/Cart';
-import { Icons } from './util/Icons';
-import './App.css';
 import { Contacts } from './sections/Сontacts';
 import { Delivery } from './sections/Delivery';
+import { SearchPage } from './components/SearchPage';
+import { Gallary } from './sections/Gallary';
+import { Footer } from './sections/Footer';
+import { Cart }  from './sections/Cart';
+import { Icons } from './util/Icons';
+import './App.css';
 
 export const App = () => {
   return (
@@ -16,11 +16,10 @@ export const App = () => {
       <NavigationBar />
       <Routes>
         <Route exact path="/" element={<Cataloge />} />
-        {/* Визначте компоненти для інших шляхів тут */}
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/search" element= {<SearchPage />} />
       </Routes>
-      <HotOffer />
       <Gallary />
       <Icons />
       <Cart />

@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react';
 
+const urlPart = 'https://654ca14b77200d6ba8591faa.mockapi.io/';
+
+export const apiCatalog = urlPart + 'catalog';
+export const apiCatalogByCategory = apiCatalog + '?catid=';
+export const apiSearch = apiCatalog + '?search=';
+export const apiCategory = urlPart + 'category';
+export const apiHotOffer = apiCatalog + '?hotoffer=yes';
+
+
 export const useCurrencyRates = () => {
   const [currencyData, setCurrencyData] = useState({ EUR: 1, USD: 1 });
 
@@ -14,3 +23,4 @@ export const useCurrencyRates = () => {
 
   return currencyData;
 };
+

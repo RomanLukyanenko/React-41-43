@@ -493,7 +493,7 @@ svg {
     margin: 0;
 }
 
-.catalog .catalog__content {
+.catalog .catalog__content  {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -506,7 +506,7 @@ svg {
     padding: var(--block-padding) 0 calc(var(--block-padding) * 2);
 }
 
-.catalog .catalog__form {
+.catalog .catalog__form  {
     width: 80%;
     position: relative;
 }
