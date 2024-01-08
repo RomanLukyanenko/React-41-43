@@ -156,17 +156,15 @@ svg {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--img-gap);
+    color: var(--text-color);
 }
 .no-result .no-result__img {
-    border-radius: 10%;
-    background-color: white;
     max-width: var(--img-size);
     margin: 0;
     flex: 1 0 auto;
 }
 .no-result .no-result__title {
     color: var(--text-color);
-    color: red;
     font-size: var(--text-size);
     font-weight: var(--text-weight);
     line-height: var(--text-lh);
@@ -175,9 +173,6 @@ svg {
     align-items: center;
 }
 .no-result.no-result--inline {
-    padding: 0 20px 0 0;
-    background-color: white;
-    border-radius: 10%;
     flex-direction: row;
     align-items: center;
 }
@@ -288,7 +283,7 @@ svg {
     --size: 2em;
     --size-stroke: 2;
     --time: 500ms;
-    --color: #fff;
+    --color: #444;
     cursor: pointer;
     width: var(--size);
     height: var(--size);
@@ -473,7 +468,6 @@ svg {
  */
 .catalog {
     padding-bottom: var(--block-padding);
-    user-select: none;
 }
 
 .catalog .catalog__header {
@@ -499,7 +493,7 @@ svg {
     margin: 0;
 }
 
-.catalog .catalog__content  {
+.catalog .catalog__content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -512,7 +506,7 @@ svg {
     padding: var(--block-padding) 0 calc(var(--block-padding) * 2);
 }
 
-.catalog .catalog__form  {
+.catalog .catalog__form {
     width: 80%;
     position: relative;
 }
@@ -520,7 +514,6 @@ svg {
 .catalog .catalog__form-search {
     width: 100%;
     padding: 13px 17px;
-    padding-right: 60px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -807,7 +800,7 @@ svg {
 /**
  * Список добавлених товарів
  */
- .cart-added-list {
+.cart-added-list {
     position: fixed;
     bottom: 30px;
     right: 30px;
