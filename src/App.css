@@ -158,12 +158,15 @@ svg {
     gap: var(--img-gap);
 }
 .no-result .no-result__img {
+    border-radius: 10%;
+    background-color: white;
     max-width: var(--img-size);
     margin: 0;
     flex: 1 0 auto;
 }
 .no-result .no-result__title {
     color: var(--text-color);
+    color: red;
     font-size: var(--text-size);
     font-weight: var(--text-weight);
     line-height: var(--text-lh);
@@ -172,6 +175,9 @@ svg {
     align-items: center;
 }
 .no-result.no-result--inline {
+    padding: 0 20px 0 0;
+    background-color: white;
+    border-radius: 10%;
     flex-direction: row;
     align-items: center;
 }
@@ -801,7 +807,7 @@ svg {
 /**
  * Список добавлених товарів
  */
-.cart-added-list {
+ .cart-added-list {
     position: fixed;
     bottom: 30px;
     right: 30px;
