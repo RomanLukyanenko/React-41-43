@@ -25,12 +25,6 @@ export const Gallary = () => {
                     <a href="#" className="gallery__item-hover-box">
                         <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
                     </a>
-                    <img src="https://picsum.photos/id/125/270/270" alt="" className="gallery__item-img"></img>
-                </div>
-                <div className="gallery__item">
-                    <a href="#" className="gallery__item-hover-box">
-                        <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
-                    </a>
                     <img src="https://picsum.photos/id/126/270/270" alt="" className="gallery__item-img"></img>
                 </div>
                 <div className="gallery__item">

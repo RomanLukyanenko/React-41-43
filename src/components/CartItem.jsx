@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-const CartItem = memo(({ product, pathImg, delCartProduct, setItemCountPlus, setItemCountMinus }) => {
+const CartItem = memo(({ product, delCartProduct, setItemCountPlus, setItemCountMinus }) => {
 	const { id, title, img, price, count } = product;
 	
 	return (
@@ -22,5 +22,7 @@ const CartItem = memo(({ product, pathImg, delCartProduct, setItemCountPlus, set
 		</div>
 	)
 });
+
+CartItem.displayName = 'CartItem';
 
 export default CartItem;

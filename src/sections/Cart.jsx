@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   removeFromCart,
@@ -45,17 +45,16 @@ export const Cart = () => {
         {cart.length === 0 ? (
           <CartNoResult />
         ) : (
-          cart.map((product, index) => {
-            const cartItemProps = {
-              key: index,
-              pathImg: config.pathImg,
-              product,
-              delCartProduct,
-              setItemCountPlus,
-              setItemCountMinus,
-            };
-            return <CartItem {...cartItemProps} />;
-          })
+          cart.map((product) => (
+            <CartItem
+              key={product.id}
+              product={product}
+              delCartProduct={delCartProduct}
+              setItemCountPlus={setItemCountPlus}
+              setItemCountMinus={setItemCountMinus}
+              pathImg={config.pathImg}
+            />
+          ))
         )}
       </div>
     </div>

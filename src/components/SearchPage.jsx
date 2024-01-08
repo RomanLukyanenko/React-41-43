@@ -4,7 +4,7 @@ import { ProductCard } from './ProductCard';
 import { FormatPrice } from '../util/FormatPrice';
 
 export const SearchPage = () => {
-  const [currentCurrency, setCurrentCurrency] = useState('UAH'); // Додайте цей стан
+  // Видалено setCurrentCurrency, якщо він не використовується
   const [searchTerm, setSearchTerm] = useState('');
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -12,16 +12,14 @@ export const SearchPage = () => {
   useEffect(() => {
     const debounceTimer = setTimeout(() => {
       if (searchTerm === '') {
-        // Завантажте весь каталог, якщо пошуковий рядок порожній
         fetchData(apiCatalog);
       } else {
-        // Завантажте результати пошуку
         fetchData(apiSearch + searchTerm);
       }
     }, 500);
 
     return () => clearTimeout(debounceTimer);
-  }, [searchTerm, apiSearch, apiCatalog]);
+  }, [searchTerm]);
 
   const fetchData = (url) => {
     setIsLoading(true);
@@ -36,10 +34,10 @@ export const SearchPage = () => {
         setIsLoading(false);
       })
       .catch((error) => {
+        console.error('Помилка при завантаженні:', error);
         setIsLoading(false);
       });
   };
-  
 
   return (
     <div className="catalog" id="catalog">
@@ -62,7 +60,7 @@ export const SearchPage = () => {
           </h3>
         </div>
         <div className="catalog__content" id="catalog-products">
-        {isLoading ? <p>Завантаження...</p> : renderProducts(products, currentCurrency)}
+        {isLoading ? <p>Завантаження...</p> : renderProducts(products)}
         </div>
       </div>
     </div>

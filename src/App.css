@@ -702,46 +702,6 @@ svg {
     opacity: 1;
 }
 
-
-
-
-
-
-/**
- * Блок гарячих пропозиції
- */
-.hot-offers {}
-
-.hot-offers .hot-offers__title {
-    padding-top: 44px;
-}
-
-.hot-offers .hot-offers__title .title-square__icon {
-    font-size: 40px;
-    line-height: 1;
-    padding-bottom: 7px;
-    color: #ff0000;
-
-}
-
-.hot-offers .hot-offers__title::after {
-    display: none;
-}
-
-.hot-offers .hot-offers__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 80px;
-}
-
-
-
-
-
-
-
 /**
  * Галерея з соц. мереж
  */
@@ -791,10 +751,6 @@ svg {
     display: block;
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.14);
 }
-
-
-
-
 
 
 /**
@@ -1005,9 +961,6 @@ svg {
     text-align: center;
 }
 
-
-
-
 /**
  * Кнопки соц мереж
  */
@@ -1053,8 +1006,6 @@ svg {
     --color: #FF0000;
     --hover-color: #d40000;
 }
-
-
 
 /**
  * Footer
@@ -1103,9 +1054,6 @@ svg {
     padding-top: 8px;
 }
 
-
-
-
 /**
  * Cтатична сторінка
  */
@@ -1123,7 +1071,6 @@ svg {
 }
 
 .article .page-content {
-    background-color: #f4f4f4;
     border-radius: 8px;
     padding: 30px;
 }
@@ -1185,12 +1132,15 @@ svg {
 }
 
 
-
 /* Стилі для форми */
 #order-form {}
 
 #order-form .form-group {
     margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
 }
 
 #order-form label {

@@ -64,7 +64,7 @@ export const Cataloge = () => {
                   e.preventDefault();
                   handleCategoryChange(category.id);
                 }}
-                   className={selectedCategory === category.id ? 'dropdown-item selected' : 'dropdown-item'}>
+                className={selectedCategory === category.id ? 'dropdown-item selected' : 'dropdown-item'}>
                   {category.title}
                 </a>
               ))}
@@ -77,11 +77,11 @@ export const Cataloge = () => {
         <div className="catalog__content" id="catalog-products">
           {filteredProducts.length === 0 ? (
             <h1>Loading...</h1>
-          ) : (
-            filteredProducts.map(product => (
-              <ProductCard key={product.id} {...product} formatPrice={formatPrice} />
-            ))
-          )}
+            ) : (
+              filteredProducts.map(product => (
+                <ProductCard key={product.id} {...product} formatPrice={formatPrice} />
+                ))
+                )}
         </div>
       </div>
     </div>

@@ -9,6 +9,8 @@ import { Footer } from './sections/Footer';
 import { Cart }  from './sections/Cart';
 import { Icons } from './util/Icons';
 import './App.css';
+import Order from './sections/Order';
+import { AboutUs } from './sections/AboutUs';
 
 export const App = () => {
   return (
@@ -19,9 +21,11 @@ export const App = () => {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/search" element= {<SearchPage />} />
+        <Route path="/about-us" element= {<AboutUs />} />
+        <Route path="/order" element= {<Order />} />
       </Routes>
-      <Gallary />
       <Icons />
+      <Gallary />
       <Cart />
       <Footer />
     </Router>
